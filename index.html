@@ -7,7 +7,6 @@
   <!-- Font Awesome Icons (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ----- global reset & base (ICTeach inspired) ----- */
     * {
       margin: 0;
       padding: 0;
@@ -15,280 +14,232 @@
     }
 
     body {
-      background: #0d1f2b;  /* deep navy, like ICTeach dark mode */
-      font-family: 'Inter', 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      background: linear-gradient(145deg, #f6f9fc 0%, #e6f0f5 100%);
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem 1.5rem;
-      background-image: radial-gradient(circle at 20% 20%, #1a3a4a 0%, #0a1a24 100%);
     }
 
-    /* main card – mimics ICTeach app card style */
-    .app-card {
-      max-width: 1100px;
+    .landing-card {
+      max-width: 1000px;
       width: 100%;
-      background: #132b38;  /* dark teal base */
-      border-radius: 48px;
-      padding: 2.5rem 2.8rem;
-      box-shadow: 0 30px 60px -10px rgba(0,0,0,0.7), inset 0 1px 2px rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.04);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 56px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 25px 50px -10px rgba(0, 20, 30, 0.25),
+                  inset 0 1px 2px rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.5);
       transition: all 0.2s ease;
-      backdrop-filter: blur(2px);
     }
 
-    @media (max-width: 680px) {
-      .app-card {
-        padding: 1.8rem 1.2rem;
-        border-radius: 32px;
+    @media (max-width: 640px) {
+      .landing-card {
+        padding: 2rem 1.5rem;
+        border-radius: 36px;
       }
     }
 
-    /* ----- header (app-like) ----- */
-    .app-header {
+    .header {
       display: flex;
       align-items: center;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 2.2rem;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      padding-bottom: 1.2rem;
+      margin-bottom: 2.5rem;
     }
 
-    .app-icon {
-      background: #1d4b5e;
-      color: #b6e2f0;
-      width: 58px;
-      height: 58px;
-      border-radius: 18px;
+    .logo-icon {
+      background: #0b2b3f;
+      color: #a9d6e5;
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 6px 12px -4px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.06);
+      font-size: 2.2rem;
+      box-shadow: 0 8px 16px -6px rgba(0, 40, 60, 0.2);
     }
 
-    .app-title {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .app-title h1 {
-      font-weight: 600;
-      font-size: 2rem;
+    .title-group h1 {
+      font-weight: 700;
+      font-size: 2.4rem;
       letter-spacing: -0.02em;
-      color: #eaf3f8;
+      color: #0a2a38;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
       flex-wrap: wrap;
+      gap: 0.3rem 0.6rem;
     }
 
-    .app-title h1 small {
-      font-size: 0.75rem;
+    .title-group h1 span {
+      background: #0b2b3f;
+      color: white;
+      font-size: 1.1rem;
       font-weight: 500;
-      background: #1d4b5e;
       padding: 0.2rem 1rem;
       border-radius: 40px;
-      color: #d0ecf5;
-      letter-spacing: 0.4px;
-      border: 1px solid rgba(255,255,255,0.02);
+      letter-spacing: 0.3px;
+      background: #1a4b5e;
     }
 
-    .app-sub {
-      color: #92b9cc;
-      font-size: 0.95rem;
-      font-weight: 400;
+    .subhead {
+      color: #1b475a;
+      font-size: 1.1rem;
+      font-weight: 450;
+      opacity: 0.9;
+      margin-top: 0.2rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      margin-top: 0.1rem;
-    }
-
-    .app-sub i {
-      color: #6ea5bd;
-      font-size: 0.8rem;
-    }
-
-    .header-tags {
-      margin-left: auto;
-      display: flex;
-      gap: 0.6rem;
       flex-wrap: wrap;
     }
 
-    .tag-pill {
-      background: rgba(255,255,255,0.04);
+    .subhead i {
+      color: #1f6d8a;
+      font-size: 0.9rem;
+    }
+
+    .badge-group {
+      margin-left: auto;
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(10, 40, 55, 0.08);
       backdrop-filter: blur(2px);
-      padding: 0.3rem 1.2rem;
+      padding: 0.4rem 1.2rem;
       border-radius: 40px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #b6d8e8;
-      border: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #0b2b3f;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.3px;
       display: flex;
       align-items: center;
-      gap: 5px;
-      letter-spacing: 0.2px;
+      gap: 6px;
     }
 
-    .tag-pill i {
-      color: #6ea5bd;
+    .badge i {
+      color: #1f6d8a;
     }
 
-    /* ----- main grid (app-like layout) ----- */
-    .app-grid {
+    .main-grid {
       display: grid;
       grid-template-columns: 1fr 1.1fr;
       gap: 2.5rem;
-      margin: 1.5rem 0 1.8rem;
+      margin: 2rem 0 1.5rem;
     }
 
     @media (max-width: 750px) {
-      .app-grid {
+      .main-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
     }
 
-    /* left panel – features (app info) */
-    .info-panel {
-      background: rgba(0,0,0,0.15);
-      border-radius: 32px;
-      padding: 1.8rem 1.8rem 1.8rem 1.8rem;
-      border: 1px solid rgba(255,255,255,0.02);
-      backdrop-filter: blur(2px);
-    }
-
     .info-panel h3 {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: #d4ecf5;
-      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0a2a38;
+      margin-bottom: 1.2rem;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      letter-spacing: -0.2px;
+      gap: 0.5rem;
     }
 
     .info-panel h3 i {
-      color: #7db7cf;
-      font-size: 1.2rem;
+      color: #1f6d8a;
+      font-size: 1.6rem;
     }
 
     .info-panel p {
-      color: #b3d2e0;
-      font-size: 0.98rem;
+      color: #1d3e4e;
+      font-size: 1.05rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
-      font-weight: 350;
     }
 
     .feature-list {
       list-style: none;
+      margin-bottom: 2rem;
     }
 
     .feature-list li {
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.03);
-      color: #c3dce8;
-      font-weight: 400;
-      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+      color: #13303e;
+      font-weight: 450;
     }
 
     .feature-list li i {
-      color: #7db7cf;
+      color: #146b8a;
       width: 1.4rem;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
-    .feature-list li:last-child {
-      border-bottom: none;
-    }
-
-    .meta-badge-group {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-      margin-top: 1.2rem;
-    }
-
-    .meta-badge {
-      background: rgba(255,255,255,0.03);
-      padding: 0.25rem 1.2rem;
+    .apk-box {
+      background: white;
       border-radius: 40px;
-      font-size: 0.7rem;
-      color: #aacbd9;
-      border: 1px solid rgba(255,255,255,0.02);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .meta-badge i {
-      color: #6ea5bd;
-    }
-
-    /* right panel – APK card (app style) */
-    .apk-card {
-      background: #0f222e;
-      border-radius: 32px;
       padding: 2rem 1.8rem;
-      border: 1px solid rgba(255,255,255,0.03);
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+      box-shadow: 0 12px 30px -8px rgba(0, 30, 45, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(2px);
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: 0.2s;
     }
 
     .apk-icon {
-      background: #1d3f4f;
-      width: 96px;
-      height: 96px;
-      border-radius: 28px;
+      background: #e1f0f7;
+      width: 100px;
+      height: 100px;
+      border-radius: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 3.4rem;
-      color: #badeec;
-      margin-bottom: 1rem;
-      box-shadow: 0 10px 20px -6px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.03);
+      font-size: 3.8rem;
+      color: #0a2a38;
+      margin-bottom: 1.2rem;
+      box-shadow: inset 0 -4px 0 rgba(0,0,0,0.03);
     }
 
-    .apk-card h4 {
+    .apk-box h4 {
       font-size: 1.8rem;
-      font-weight: 500;
-      color: #e2f0f5;
-      letter-spacing: -0.5px;
+      font-weight: 600;
+      color: #0a2a38;
+      letter-spacing: -0.3px;
     }
 
-    .apk-version-tag {
-      background: #1a3c4b;
-      padding: 0.2rem 1.6rem;
+    .apk-version {
+      background: #eef6fa;
+      padding: 0.2rem 1.2rem;
       border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: #b5d8e8;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1a4b5e;
       margin: 0.2rem 0 1.2rem 0;
       display: inline-block;
-      border: 1px solid rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.5);
     }
 
     .download-btn {
-      background: #2b6a82;  /* ICTeach accent */
+      background: #0b2b3f;
       border: none;
       color: white;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.2rem;
-      padding: 0.9rem 2.5rem;
+      padding: 1rem 2.5rem;
       border-radius: 60px;
       width: 100%;
       max-width: 280px;
@@ -298,30 +249,30 @@
       gap: 0.8rem;
       cursor: pointer;
       transition: 0.2s ease;
-      box-shadow: 0 8px 18px -6px rgba(0, 30, 45, 0.6);
-      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: 0 8px 18px -6px rgba(10, 40, 55, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       text-decoration: none;
       color: white;
     }
 
     .download-btn i {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     .download-btn:hover {
-      background: #34829e;
+      background: #123d52;
       transform: scale(1.02);
-      box-shadow: 0 12px 28px -6px rgba(0, 40, 60, 0.5);
+      box-shadow: 0 12px 24px -8px rgba(10, 40, 55, 0.4);
     }
 
     .download-btn:active {
-      transform: scale(0.96);
+      transform: scale(0.97);
     }
 
-    .file-meta {
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      color: #8eb7ca;
+    .file-info {
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      color: #1f5d74;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -329,103 +280,79 @@
       justify-content: center;
     }
 
-    .file-meta i {
-      color: #5f95ad;
+    .file-info i {
+      opacity: 0.7;
     }
 
-    .secure-badge {
-      margin-top: 0.5rem;
-      background: rgba(0,0,0,0.2);
-      padding: 0.25rem 1.4rem;
+    .secure-note {
+      margin-top: 0.8rem;
+      background: rgba(11, 43, 63, 0.03);
+      padding: 0.4rem 1.2rem;
       border-radius: 60px;
-      font-size: 0.7rem;
-      color: #b5d0dd;
-      border: 1px solid rgba(255,255,255,0.02);
+      font-size: 0.8rem;
+      color: #1f5a70;
+      border: 1px dashed rgba(0, 0, 0, 0.05);
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
     }
 
-    .hash-row {
-      margin-top: 1.2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      font-size: 0.65rem;
-      color: #6f97ac;
-    }
-
-    .hash-row span {
-      background: rgba(0,0,0,0.15);
-      padding: 0.1rem 0.8rem;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.02);
-    }
-
-    /* footer (app-style) */
-    .app-footer {
-      margin-top: 2rem;
+    .footer-note {
+      margin-top: 2.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.03);
-      padding-top: 1.4rem;
-      color: #89b1c4;
+      border-top: 1px solid rgba(0, 0, 0, 0.04);
+      padding-top: 1.8rem;
+      color: #1b4a5c;
     }
 
-    .team-badge {
+    .team-access {
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      font-size: 0.9rem;
-      background: rgba(0,0,0,0.15);
-      padding: 0.2rem 1rem 0.2rem 0.8rem;
+      font-size: 0.95rem;
+      background: rgba(0, 0, 0, 0.01);
+      padding: 0.3rem 1rem 0.3rem 0.8rem;
       border-radius: 60px;
     }
 
-    .team-badge i {
-      color: #7db7cf;
-      background: rgba(255,255,255,0.02);
-      padding: 0.2rem;
+    .team-access i {
+      color: #146b8a;
+      background: white;
+      padding: 0.3rem;
       border-radius: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
     }
 
-    .copy-action {
-      background: rgba(255,255,255,0.02);
+    .copy-badge {
+      background: rgba(0,0,0,0.02);
       padding: 0.3rem 1.2rem;
       border-radius: 60px;
-      font-size: 0.7rem;
-      font-weight: 400;
-      color: #aacbd9;
-      border: 1px solid rgba(255,255,255,0.02);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #133e50;
+      border: 1px solid rgba(255,255,255,0.4);
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      cursor: pointer;
-      transition: 0.1s;
     }
 
-    .copy-action:hover {
-      background: rgba(255,255,255,0.04);
+    .copy-badge i {
+      color: #1f6d8a;
     }
 
     .disclaimer {
-      font-size: 0.7rem;
-      opacity: 0.4;
-      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      opacity: 0.6;
+      margin-top: 1.2rem;
       text-align: center;
-      color: #a0c2d2;
-      letter-spacing: 0.2px;
+      color: #1d3e4e;
     }
 
-    /* small helper */
-    .accent-dot {
-      color: #4e9bb8;
-    }
-
+    /* fake button for demonstration (APK link) */
     .download-btn a {
       color: white;
       text-decoration: none;
@@ -440,142 +367,168 @@
       color: white;
     }
 
-    /* mimic ICTeach subtle glow */
-    .glow-text {
-      text-shadow: 0 0 12px rgba(60, 160, 200, 0.1);
+    /* small tag */
+    .tag {
+      background: #d6eaf3;
+      border-radius: 30px;
+      padding: 0.2rem 0.8rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #0b2b3f;
+      letter-spacing: 0.3px;
     }
   </style>
 </head>
 <body>
-<div class="app-card">
 
-  <!-- header – ICTeach style -->
-  <div class="app-header">
-    <div class="app-icon">
+<div class="landing-card">
+
+  <!-- header -->
+  <div class="header">
+    <div class="logo-icon">
       <i class="fas fa-chalkboard-teacher"></i>
     </div>
-    <div class="app-title">
+    <div class="title-group">
       <h1>
         ICTeach
-        <small>v2.4</small>
+        <span>v2.4</span>
       </h1>
-      <div class="app-sub">
-        <i class="fas fa-robot"></i> interactive training · APK
-        <span style="background: #1d4b5e; padding: 0.05rem 0.8rem; border-radius: 30px; font-size: 0.7rem; margin-left: 0.3rem; color: #c6e3f0;"><i class="fas fa-shield-alt"></i> internal</span>
+      <div class="subhead">
+        <i class="fas fa-robot"></i> interactive learning · APK
+        <span class="tag" style="margin-left: 0.5rem;"><i class="fas fa-shield-alt"></i> internal</span>
       </div>
     </div>
-    <div class="header-tags">
-      <span class="tag-pill"><i class="fas fa-users"></i> team</span>
-      <span class="tag-pill"><i class="fas fa-android"></i> Android</span>
+    <div class="badge-group">
+      <span class="badge"><i class="fas fa-users"></i> team only</span>
+      <span class="badge"><i class="fas fa-android"></i> Android</span>
     </div>
   </div>
 
-  <!-- main grid – app-like card layout -->
-  <div class="app-grid">
-    <!-- left: info panel (similar to app dashboard) -->
+  <!-- main grid -->
+  <div class="main-grid">
+    <!-- left: info -->
     <div class="info-panel">
       <h3><i class="fas fa-info-circle"></i> About ICTeach</h3>
       <p>
-        <strong style="color: #d4ecf5;">ICTeach</strong> is a modern, offline-ready APK built for 
-        your team's ICT development. No GitHub access needed — direct download.
+        <strong>ICTeach</strong> is a lightweight, offline-friendly APK built for 
+        collaborative ICT training. Designed for your team — no GitHub needed.
+        Just download, install, and start learning.
       </p>
+
       <ul class="feature-list">
-        <li><i class="fas fa-check-circle"></i> Interactive modules & assessments</li>
-        <li><i class="fas fa-wifi-slash"></i> Fully offline after installation</li>
-        <li><i class="fas fa-users-cog"></i> Team dashboard (zero sign-in)</li>
-        <li><i class="fas fa-shield-alt"></i> Private & encrypted storage</li>
-        <li><i class="fas fa-chart-line"></i> Progress tracking & reports</li>
+        <li><i class="fas fa-check-circle"></i> Interactive modules & quizzes</li>
+        <li><i class="fas fa-wifi-slash"></i> Works offline after install</li>
+        <li><i class="fas fa-users-cog"></i> Team dashboard (no sign-in required)</li>
+        <li><i class="fas fa-shield-alt"></i> Private & secure — internal use only</li>
+        <li><i class="fas fa-file-alt"></i> Built-in progress tracker</li>
       </ul>
-      <div class="meta-badge-group">
-        <span class="meta-badge"><i class="fas fa-calendar-alt"></i> 24 jun 2026</span>
-        <span class="meta-badge"><i class="fas fa-database"></i> 42 MB</span>
-        <span class="meta-badge"><i class="fas fa-code-branch"></i> build 106</span>
+
+      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+        <span style="background: #dfecf2; border-radius: 30px; padding: 0.3rem 1.2rem; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"><i class="fas fa-calendar-alt"></i> updated: 24 jun 2026</span>
+        <span style="background: #dfecf2; border-radius: 30px; padding: 0.3rem 1.2rem; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"><i class="fas fa-database"></i> 42 MB</span>
       </div>
     </div>
 
-    <!-- right: APK download card (app style) -->
-    <div class="apk-card">
+    <!-- right: APK card -->
+    <div class="apk-box">
       <div class="apk-icon">
         <i class="fas fa-file-archive"></i>
       </div>
       <h4>ICTeach.apk</h4>
-      <div class="apk-version-tag">
-        <i class="fas fa-tag"></i> version 2.4.0
+      <div class="apk-version">
+        <i class="fas fa-tag"></i> version 2.4.0 · build 106
       </div>
 
-      <!-- DOWNLOAD BUTTON (direct APK access) -->
+      <!-- DOWNLOAD BUTTON (APK)  - direct access for team -->
       <a href="#" class="download-btn" id="downloadApkBtn">
         <i class="fas fa-download"></i> Download APK
-        <span style="font-size: 0.7rem; opacity: 0.7; font-weight: 300; background: rgba(0,0,0,0.2); padding: 0 0.8rem; border-radius: 30px;">.apk</span>
+        <span style="font-size: 0.7rem; opacity: 0.7; font-weight: 400; background: rgba(255,255,255,0.08); padding: 0 0.6rem; border-radius: 20px;">.apk</span>
       </a>
 
-      <div class="file-meta">
-        <i class="fas fa-check-circle" style="color: #5f95ad;"></i>
+      <!-- file info + secure note -->
+      <div class="file-info">
+        <i class="fas fa-check-circle" style="color: #146b8a;"></i> 
         <span>direct APK · no GitHub required</span>
         <i class="fas fa-lock" style="margin-left: 0.2rem;"></i>
       </div>
-      <div class="secure-badge">
-        <i class="fas fa-user-check"></i> team-only access
+      <div class="secure-note">
+        <i class="fas fa-user-check"></i> only accessible for your team
       </div>
 
-      <div class="hash-row">
+      <!-- extra meta -->
+      <div style="margin-top: 1.8rem; width: 100%; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; color: #1a4b5e;">
         <span><i class="fas fa-fingerprint"></i> SHA-256: 3f4a...c9d2</span>
-        <span><i class="fas fa-qrcode"></i> #team-icteach</span>
+        <span><i class="fas fa-qrcode"></i>  <span style="background: #e2eef6; padding: 0.1rem 0.5rem; border-radius: 12px;">team-icteach</span></span>
       </div>
     </div>
   </div>
 
-  <!-- footer – team & copy (app-like) -->
-  <div class="app-footer">
-    <div class="team-badge">
+  <!-- footer area: team access info + note -->
+  <div class="footer-note">
+    <div class="team-access">
       <i class="fas fa-user-circle" style="font-size: 1.6rem;"></i>
-      <span><strong style="color: #d4ecf5;">Team access</strong> · 12 members</span>
-      <span style="background: #1a3c4b; padding: 0.05rem 0.8rem; border-radius: 30px; font-size: 0.7rem; color: #b5d8e8;"><i class="fas fa-check"></i> authorized</span>
+      <span><strong>Team access</strong> · 12 members</span>
+      <span style="background: #d0e3ed; padding: 0.1rem 0.8rem; border-radius: 30px; font-size: 0.7rem;"><i class="fas fa-check"></i> authorized</span>
     </div>
-    <div class="copy-action" id="copyPageLink">
+    <div class="copy-badge">
       <i class="fas fa-copy"></i>  share this page
     </div>
   </div>
 
   <div class="disclaimer">
-    <i class="fas fa-shield-alt"></i> For internal team use only. APK hosted securely — no GitHub credentials.
+    <i class="fas fa-shield-alt"></i> For internal team use only. APK hosted securely — no GitHub credentials required.
   </div>
+
 </div>
 
-<!-- script for interactions (app-like) -->
+<!-- small script to simulate APK download (for demonstration) -->
 <script>
   (function() {
     const downloadBtn = document.getElementById('downloadApkBtn');
-    // Simulate APK download / team message
+
+    // If you have a real APK URL, replace the href in the <a> tag.
+    // For this demo, we trigger a simulated download (since we don't have a real .apk file).
+    // In production, just set href="https://your-server.com/ICTeach.apk"
+    // But we also keep the anchor behavior.
+    // We'll override click to show a friendly message (since no real file).
+    // However, we want to keep the landing page useful: we use a fake download that shows an alert.
+    // But we also add a 'download' attribute to hint.
     downloadBtn.addEventListener('click', function(e) {
+      // If the href is '#' (default), we simulate.
       if (this.getAttribute('href') === '#') {
         e.preventDefault();
-        // ICTeach style feedback
-        this.style.background = '#3d8aa8';
-        this.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> preparing...';
-        setTimeout(() => {
-          this.innerHTML = '<i class="fas fa-check-circle"></i> APK ready for team';
-          this.style.background = '#2b6a82';
-          setTimeout(() => {
-            this.innerHTML = '<i class="fas fa-download"></i> Download APK <span style="font-size: 0.7rem; opacity: 0.7; font-weight: 300; background: rgba(0,0,0,0.2); padding: 0 0.8rem; border-radius: 30px;">.apk</span>';
-            this.style.background = '#2b6a82';
-          }, 1500);
-        }, 600);
-        // show an alert (informational)
-        setTimeout(() => {
-          alert('📲 ICTeach APK is available for your team.\nIn production, the download will start directly.');
-        }, 300);
+        // Provide a team-friendly message: "APK ready for your team" + a fake download.
+        // Since we don't have a real APK, we inform that the APK is available and provide a fake download.
+        // But better: we give a message that the APK is available for the team.
+        // For demonstration, we trigger a dummy download (just a text file) so they see a download action.
+        // but we want to keep it professional. Let's show an alert with instructions, but also provide
+        // a direct download link (fake) so they experience the flow.
+        // In a real scenario, replace with your APK link.
+        alert('📲 ICTeach APK is ready for your team! \nIn production, this button would download the APK directly.\n(Your team can access it from this page.)');
+        // Create a dummy download to show that the button works (optional)
+        // but we do not want to confuse. So we just show a message. 
+        // we can also simulate a small txt download to show feedback.
+        // but we will just show a notification.
+        // we could also open a new window with a fake download, but not needed.
+        // We'll add a small "success" style.
+        this.style.background = '#1f6d8a';
+        setTimeout(() => { this.style.background = '#0b2b3f'; }, 300);
+      } else {
+        // If href is set, it will naturally download.
+        // but we keep it.
+        return true;
       }
     });
 
-    // copy page link
-    const copyAction = document.getElementById('copyPageLink');
-    if (copyAction) {
-      copyAction.addEventListener('click', function() {
+    // Optional: if you want to make the "copy-badge" copy the URL
+    const copyBadge = document.querySelector('.copy-badge');
+    if (copyBadge) {
+      copyBadge.style.cursor = 'pointer';
+      copyBadge.addEventListener('click', function() {
         const url = window.location.href;
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(url).then(() => {
-            alert('🔗 Page URL copied! Share with your team.');
+            alert('🔗 Page URL copied to clipboard! Share with your team.');
           }).catch(() => {
             alert('📋 Copy this URL: ' + url);
           });
@@ -586,5 +539,7 @@
     }
   })();
 </script>
+
+<!-- note: this landing page is self-contained, no external dependencies except FontAwesome -->
 </body>
 </html>
