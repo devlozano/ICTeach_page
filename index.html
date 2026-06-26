@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
       border-radius: 56px;
       padding: 3rem 2.5rem;
       box-shadow: 0 25px 50px -10px rgba(0, 20, 30, 0.25),
-                  inset 0 1px 2px rgba(255, 255, 255, 0.6);
+        inset 0 1px 2px rgba(255, 255, 255, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.5);
       transition: all 0.2s ease;
     }
@@ -211,7 +212,7 @@
       font-size: 3.8rem;
       color: #0a2a38;
       margin-bottom: 1.2rem;
-      box-shadow: inset 0 -4px 0 rgba(0,0,0,0.03);
+      box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.03);
     }
 
     .apk-box h4 {
@@ -230,7 +231,7 @@
       color: #1a4b5e;
       margin: 0.2rem 0 1.2rem 0;
       display: inline-block;
-      border: 1px solid rgba(255,255,255,0.5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
     .download-btn {
@@ -324,17 +325,17 @@
       background: white;
       padding: 0.3rem;
       border-radius: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
     }
 
     .copy-badge {
-      background: rgba(0,0,0,0.02);
+      background: rgba(0, 0, 0, 0.02);
       padding: 0.3rem 1.2rem;
       border-radius: 60px;
       font-size: 0.75rem;
       font-weight: 500;
       color: #133e50;
-      border: 1px solid rgba(255,255,255,0.4);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       display: flex;
       align-items: center;
       gap: 0.3rem;
@@ -379,167 +380,178 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="landing-card">
+  <div class="landing-card">
 
-  <!-- header -->
-  <div class="header">
-    <div class="logo-icon">
-      <i class="fas fa-chalkboard-teacher"></i>
-    </div>
-    <div class="title-group">
-      <h1>
-        ICTeach
-        <span>v2.4</span>
-      </h1>
-      <div class="subhead">
-        <i class="fas fa-robot"></i> interactive learning · APK
-        <span class="tag" style="margin-left: 0.5rem;"><i class="fas fa-shield-alt"></i> internal</span>
+    <!-- header -->
+    <div class="header">
+      <div class="logo-icon">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <div class="title-group">
+        <h1>
+          ICTeach
+          <span>v2.4</span>
+        </h1>
+        <div class="subhead">
+          <i class="fas fa-robot"></i> interactive learning · APK
+          <span class="tag" style="margin-left: 0.5rem;"><i class="fas fa-shield-alt"></i> internal</span>
+        </div>
+      </div>
+      <div class="badge-group">
+        <span class="badge"><i class="fas fa-users"></i> team only</span>
+        <span class="badge"><i class="fas fa-android"></i> Android</span>
       </div>
     </div>
-    <div class="badge-group">
-      <span class="badge"><i class="fas fa-users"></i> team only</span>
-      <span class="badge"><i class="fas fa-android"></i> Android</span>
+
+    <!-- main grid -->
+    <div class="main-grid">
+      <!-- left: info -->
+      <div class="info-panel">
+        <h3><i class="fas fa-info-circle"></i> About ICTeach</h3>
+        <p>
+          <strong>ICTeach</strong> is a lightweight, offline-friendly APK built for
+          collaborative ICT training. Designed for your team — no GitHub needed.
+          Just download, install, and start learning.
+        </p>
+
+        <ul class="feature-list">
+          <li><i class="fas fa-check-circle"></i> Interactive modules & quizzes</li>
+          <li><i class="fas fa-wifi-slash"></i> Works offline after install</li>
+          <li><i class="fas fa-users-cog"></i> Team dashboard (no sign-in required)</li>
+          <li><i class="fas fa-shield-alt"></i> Private & secure — internal use only</li>
+          <li><i class="fas fa-file-alt"></i> Built-in progress tracker</li>
+        </ul>
+
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <span
+            style="background: #dfecf2; border-radius: 30px; padding: 0.3rem 1.2rem; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"><i
+              class="fas fa-calendar-alt"></i> updated: 24 jun 2026</span>
+          <span
+            style="background: #dfecf2; border-radius: 30px; padding: 0.3rem 1.2rem; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"><i
+              class="fas fa-database"></i> 42 MB</span>
+        </div>
+      </div>
+
+      <!-- right: APK card -->
+      <div class="apk-box">
+        <div class="apk-icon">
+          <i class="fas fa-file-archive"></i>
+        </div>
+        <h4>ICTeach.apk</h4>
+        <div class="apk-version">
+          <i class="fas fa-tag"></i> version 2.4.0 · build 106
+        </div>
+
+        <!-- DOWNLOAD BUTTON (APK)  - direct access for team -->
+        <a href="downloads/ICTeach.apk" class="download-btn" id="downloadApkBtn">
+          <i class="fas fa-download"></i> Download APK
+          <span
+            style="font-size: 0.7rem; opacity: 0.7; font-weight: 400; background: rgba(255,255,255,0.08); padding: 0 0.6rem; border-radius: 20px;">.apk</span>
+        </a>
+
+        <!-- file info + secure note -->
+        <div class="file-info">
+          <i class="fas fa-check-circle" style="color: #146b8a;"></i>
+          <span>direct APK · no GitHub required</span>
+          <i class="fas fa-lock" style="margin-left: 0.2rem;"></i>
+        </div>
+        <div class="secure-note">
+          <i class="fas fa-user-check"></i> only accessible for your team
+        </div>
+
+        <!-- extra meta -->
+        <div
+          style="margin-top: 1.8rem; width: 100%; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; color: #1a4b5e;">
+          <span><i class="fas fa-fingerprint"></i> SHA-256: 3f4a...c9d2</span>
+          <span><i class="fas fa-qrcode"></i> <span
+              style="background: #e2eef6; padding: 0.1rem 0.5rem; border-radius: 12px;">team-icteach</span></span>
+        </div>
+      </div>
     </div>
+
+    <!-- footer area: team access info + note -->
+    <div class="footer-note">
+      <div class="team-access">
+        <i class="fas fa-user-circle" style="font-size: 1.6rem;"></i>
+        <span><strong>Team access</strong> · 12 members</span>
+        <span style="background: #d0e3ed; padding: 0.1rem 0.8rem; border-radius: 30px; font-size: 0.7rem;"><i
+            class="fas fa-check"></i> authorized</span>
+      </div>
+      <div class="copy-badge">
+        <i class="fas fa-copy"></i> share this page
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <i class="fas fa-shield-alt"></i> For internal team use only. APK hosted securely — no GitHub credentials
+      required.
+    </div>
+
   </div>
 
-  <!-- main grid -->
-  <div class="main-grid">
-    <!-- left: info -->
-    <div class="info-panel">
-      <h3><i class="fas fa-info-circle"></i> About ICTeach</h3>
-      <p>
-        <strong>ICTeach</strong> is a lightweight, offline-friendly APK built for 
-        collaborative ICT training. Designed for your team — no GitHub needed.
-        Just download, install, and start learning.
-      </p>
+  <!-- small script to simulate APK download (for demonstration) -->
+  <script>
+    (function () {
+      const downloadBtn = document.getElementById('downloadApkBtn');
 
-      <ul class="feature-list">
-        <li><i class="fas fa-check-circle"></i> Interactive modules & quizzes</li>
-        <li><i class="fas fa-wifi-slash"></i> Works offline after install</li>
-        <li><i class="fas fa-users-cog"></i> Team dashboard (no sign-in required)</li>
-        <li><i class="fas fa-shield-alt"></i> Private & secure — internal use only</li>
-        <li><i class="fas fa-file-alt"></i> Built-in progress tracker</li>
-      </ul>
-
-      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <span style="background: #dfecf2; border-radius: 30px; padding: 0.3rem 1.2rem; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"><i class="fas fa-calendar-alt"></i> updated: 24 jun 2026</span>
-        <span style="background: #dfecf2; border-radius: 30px; padding: 0.3rem 1.2rem; font-size: 0.75rem; display: flex; align-items: center; gap: 4px;"><i class="fas fa-database"></i> 42 MB</span>
-      </div>
-    </div>
-
-    <!-- right: APK card -->
-    <div class="apk-box">
-      <div class="apk-icon">
-        <i class="fas fa-file-archive"></i>
-      </div>
-      <h4>ICTeach.apk</h4>
-      <div class="apk-version">
-        <i class="fas fa-tag"></i> version 2.4.0 · build 106
-      </div>
-
-      <!-- DOWNLOAD BUTTON (APK)  - direct access for team -->
-      <a href="#" class="download-btn" id="downloadApkBtn">
-        <i class="fas fa-download"></i> Download APK
-        <span style="font-size: 0.7rem; opacity: 0.7; font-weight: 400; background: rgba(255,255,255,0.08); padding: 0 0.6rem; border-radius: 20px;">.apk</span>
-      </a>
-
-      <!-- file info + secure note -->
-      <div class="file-info">
-        <i class="fas fa-check-circle" style="color: #146b8a;"></i> 
-        <span>direct APK · no GitHub required</span>
-        <i class="fas fa-lock" style="margin-left: 0.2rem;"></i>
-      </div>
-      <div class="secure-note">
-        <i class="fas fa-user-check"></i> only accessible for your team
-      </div>
-
-      <!-- extra meta -->
-      <div style="margin-top: 1.8rem; width: 100%; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; color: #1a4b5e;">
-        <span><i class="fas fa-fingerprint"></i> SHA-256: 3f4a...c9d2</span>
-        <span><i class="fas fa-qrcode"></i>  <span style="background: #e2eef6; padding: 0.1rem 0.5rem; border-radius: 12px;">team-icteach</span></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- footer area: team access info + note -->
-  <div class="footer-note">
-    <div class="team-access">
-      <i class="fas fa-user-circle" style="font-size: 1.6rem;"></i>
-      <span><strong>Team access</strong> · 12 members</span>
-      <span style="background: #d0e3ed; padding: 0.1rem 0.8rem; border-radius: 30px; font-size: 0.7rem;"><i class="fas fa-check"></i> authorized</span>
-    </div>
-    <div class="copy-badge">
-      <i class="fas fa-copy"></i>  share this page
-    </div>
-  </div>
-
-  <div class="disclaimer">
-    <i class="fas fa-shield-alt"></i> For internal team use only. APK hosted securely — no GitHub credentials required.
-  </div>
-
-</div>
-
-<!-- small script to simulate APK download (for demonstration) -->
-<script>
-  (function() {
-    const downloadBtn = document.getElementById('downloadApkBtn');
-
-    // If you have a real APK URL, replace the href in the <a> tag.
-    // For this demo, we trigger a simulated download (since we don't have a real .apk file).
-    // In production, just set href="https://your-server.com/ICTeach.apk"
-    // But we also keep the anchor behavior.
-    // We'll override click to show a friendly message (since no real file).
-    // However, we want to keep the landing page useful: we use a fake download that shows an alert.
-    // But we also add a 'download' attribute to hint.
-    downloadBtn.addEventListener('click', function(e) {
-      // If the href is '#' (default), we simulate.
-      if (this.getAttribute('href') === '#') {
-        e.preventDefault();
-        // Provide a team-friendly message: "APK ready for your team" + a fake download.
-        // Since we don't have a real APK, we inform that the APK is available and provide a fake download.
-        // But better: we give a message that the APK is available for the team.
-        // For demonstration, we trigger a dummy download (just a text file) so they see a download action.
-        // but we want to keep it professional. Let's show an alert with instructions, but also provide
-        // a direct download link (fake) so they experience the flow.
-        // In a real scenario, replace with your APK link.
-        alert('📲 ICTeach APK is ready for your team! \nIn production, this button would download the APK directly.\n(Your team can access it from this page.)');
-        // Create a dummy download to show that the button works (optional)
-        // but we do not want to confuse. So we just show a message. 
-        // we can also simulate a small txt download to show feedback.
-        // but we will just show a notification.
-        // we could also open a new window with a fake download, but not needed.
-        // We'll add a small "success" style.
-        this.style.background = '#1f6d8a';
-        setTimeout(() => { this.style.background = '#0b2b3f'; }, 300);
-      } else {
-        // If href is set, it will naturally download.
-        // but we keep it.
-        return true;
-      }
-    });
-
-    // Optional: if you want to make the "copy-badge" copy the URL
-    const copyBadge = document.querySelector('.copy-badge');
-    if (copyBadge) {
-      copyBadge.style.cursor = 'pointer';
-      copyBadge.addEventListener('click', function() {
-        const url = window.location.href;
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(url).then(() => {
-            alert('🔗 Page URL copied to clipboard! Share with your team.');
-          }).catch(() => {
-            alert('📋 Copy this URL: ' + url);
-          });
+      // If you have a real APK URL, replace the href in the <a> tag.
+      // For this demo, we trigger a simulated download (since we don't have a real .apk file).
+      // In production, just set href="https://your-server.com/ICTeach.apk"
+      // But we also keep the anchor behavior.
+      // We'll override click to show a friendly message (since no real file).
+      // However, we want to keep the landing page useful: we use a fake download that shows an alert.
+      // But we also add a 'download' attribute to hint.
+      downloadBtn.addEventListener('click', function (e) {
+        // If the href is '#' (default), we simulate.
+        if (this.getAttribute('href') === '#') {
+          e.preventDefault();
+          // Provide a team-friendly message: "APK ready for your team" + a fake download.
+          // Since we don't have a real APK, we inform that the APK is available and provide a fake download.
+          // But better: we give a message that the APK is available for the team.
+          // For demonstration, we trigger a dummy download (just a text file) so they see a download action.
+          // but we want to keep it professional. Let's show an alert with instructions, but also provide
+          // a direct download link (fake) so they experience the flow.
+          // In a real scenario, replace with your APK link.
+          alert('📲 ICTeach APK is ready for your team! \nIn production, this button would download the APK directly.\n(Your team can access it from this page.)');
+          // Create a dummy download to show that the button works (optional)
+          // but we do not want to confuse. So we just show a message. 
+          // we can also simulate a small txt download to show feedback.
+          // but we will just show a notification.
+          // we could also open a new window with a fake download, but not needed.
+          // We'll add a small "success" style.
+          this.style.background = '#1f6d8a';
+          setTimeout(() => { this.style.background = '#0b2b3f'; }, 300);
         } else {
-          alert('📋 Copy this URL: ' + url);
+          // If href is set, it will naturally download.
+          // but we keep it.
+          return true;
         }
       });
-    }
-  })();
-</script>
 
-<!-- note: this landing page is self-contained, no external dependencies except FontAwesome -->
+      // Optional: if you want to make the "copy-badge" copy the URL
+      const copyBadge = document.querySelector('.copy-badge');
+      if (copyBadge) {
+        copyBadge.style.cursor = 'pointer';
+        copyBadge.addEventListener('click', function () {
+          const url = window.location.href;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(() => {
+              alert('🔗 Page URL copied to clipboard! Share with your team.');
+            }).catch(() => {
+              alert('📋 Copy this URL: ' + url);
+            });
+          } else {
+            alert('📋 Copy this URL: ' + url);
+          }
+        });
+      }
+    })();
+  </script>
+
+  <!-- note: this landing page is self-contained, no external dependencies except FontAwesome -->
 </body>
+
 </html>
